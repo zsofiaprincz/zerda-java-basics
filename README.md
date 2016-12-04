@@ -35,27 +35,41 @@ When the user hits the `reset` button, a new Deck should be generated and player
 
 ### Information on the elements
 - Tests will be run on your code
-    - Use names in the code whats used in the description
-    - Don't use visibility on fields
-    - Otherwise tests will fail probably
+    - use names in the code whats used in the description
+    - don't use visibility on fields
+    - don't use accent in strings or in comments
+    - otherwise tests will fail probably
+- In your main method
+    - create a JFrame
+    - add BlackJack panel to it
+    - make it visible
 - The `BlackJack`
-    - should be a `JFrame` and should handle the button actions in one method
+    - should be a `Jpanel`
+    - should handle the button actions in one method
 - The `Deck`
     - should contain two lists: `cards` and `used`, all cards should be in the cards list and after used it should go in to the used list.
     - you can use the `Collection.shuffle(list)` for shuffling the deck
+    - if all cards are used `null` should be returned when drawing from the deck
 - The `Card`
     - should have a color and a value
-    - should be displayed as `"color value"` eg. `"kör 7"`
+    - should be displayed as `"color value"` eg. `"karo 7"`
 - The `Player`
     - should have a name
     - should have a list where it stores its `played` cards
     - should be able to `sum` the value of its played cards
     - should be able to `add` a new card to its played cards
-    - should be added to the panel and displayed as shown: `"Name played: color value..."` eg. `"User played: kör 7 káró 4 "`
+    - should be added to the panel and displayed as shown: `"Name played: color value..."` eg. `"User played: kor 7 karo 4 "`
 
 ### Acceptance criteria
 The application is accepted if:
 - All tests pass
+- You can check your results here: http://gf-exam.mobil.ninja/
+    - In order to register your work you have to create a Pull Request on Github
+    - Go to your forked repo (https://github.com/yourname/zerda-java-basics)
+    - Click `New pull request`
+    - Then `Create pull request`
+    - After the pull request created your every commit will be evaluated on the site
+    - You can check your results
 
 ## 3. Understand the code (~10 mins) [4p]
 ```java
