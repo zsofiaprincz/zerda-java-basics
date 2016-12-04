@@ -19,14 +19,18 @@
 
 ## 2. The BlackJack Application (~90 mins) [15p]
 The task is to create a `BlackJack` application where a `user` `Player` can play BlackJack with the `house` `Player`. The game should have a very simple graphical user interface with two labels (one for the user and one for the house) and two buttons for draw and for resetting the game.
+
 ![Start](bj_start.png)
+
 When a new game started a new `Deck` should be generated with 52 randomly ordered `Card`s in it.
 When the user hits the `drawCard` button the top card of the deck should be added to the users `played` cards. If the house's played cards sum is under 17 it will draw automatically. After drawing the labels should be updated.
 
 One card drawn:
+
 ![Round one](bj_1.png)
 
 Two cards drawn:
+
 ![Round two](bj_2.png)
 
 ** Layout is not important just put everything in one `JPanel` with the default layout (no need to change that) **
