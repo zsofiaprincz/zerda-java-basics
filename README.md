@@ -107,14 +107,45 @@ Are the tests passing? Detail your answer! [2p] Fix the situation! [2p]
 
 #### Explain what you did, and answer the questions here:
 
+Both test are passing (assuming we create a main method) but because we give them a lucky set of values. 
+
+The add method can be be changed two ways: either we want to test if the function always returns 5. In that case we should rename the method to something like methodThatReturnsFiveAlways or we want to test if the method really adds the integers. Assuming in the second method we want to determine the maximum value among 3 integers we should use Math.max.
+
+class Apple {
+  public int add(int a, int b) {
+    return a+b;
+  }
+
+  public int max_of_three(int a, int b, int c) {
+   return Math.max(x,y,z)
+}
+
+class TestApple {
+  public void testAdd() {
+    assertEquals(5, Apple.add(2, 3));
+  }
+
+  public void testMax() {
+    assertEquals(5, Apple.Math.max(3, 4, 5));
+  }
+}
 
 ## 4. Question time! (~20 mins) [6p]
 
 ### Where the abstract class is useful? [2p]
-#### Your answer:
+#### Your answer: An abstract class is useful when we want other classes to inherit behaviours (methods) and variables. The classes who are inheriting from the abstract class have something in common e.g. Animal - all animals move, but its execution can differ e.g fish swims, monkey climbs. 
 
 ### Describe a method! Show the necessary parts and how are them called! [2p]
-#### Your answer:
+#### Your answer: 
+A method is an operation in java. It consist of the following:
+Access modifier: public,private,protected
++ static: if we want the method to belong to the class and not to the object
+returner: "void"/some value - void methods do not return anything, but if we define a data type or any variable it will return its value
+method name: always a verb, starts with lower case continues with camel case
+parameters: we can define the entry parameters of the method which means we define what data the method should take
+method body: the part where we describe the operation. Ideally one method should only do one thing
+
 
 ### What is the constructor? When it is used? [2p]
-#### Your answer:
+#### Your answer: 
+Constructor is a method that is used to initialize the object at the time of object creation. Its name must be the same as the class (so ideally it is a noun) . The empty constructor (no argument constructor) does not take any arguments and there can be parameterized constructors that do have parameters. A class can have as much constructors (with different set of entry parmeters) as we want, this called method overloading. 
