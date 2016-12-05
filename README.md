@@ -48,7 +48,7 @@ When the user hits the `reset` button, a new Deck should be generated and player
     - add BlackJack panel to it
     - make it visible
 - The `BlackJack`
-    - should be a `Jpanel`
+    - should be a `JPanel`
     - should handle the button actions in one method
 - The `Deck`
     - should contain two lists: `cards` and `used`, all cards should be in the cards list and after used it should go in to the used list.
@@ -56,7 +56,8 @@ When the user hits the `reset` button, a new Deck should be generated and player
     - if all cards are used `null` should be returned when drawing from the deck
 - The `Card`
     - should have a color and a value
-    - should be displayed as `"color value"` eg. `"karo 7"`
+    - should have a getter for the value 
+    - should be displayed as `"color value"` eg. `"karo 7"`
 - The `Player`
     - should have a name
     - should have a list where it stores its `played` cards
