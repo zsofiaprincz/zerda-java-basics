@@ -10,5 +10,11 @@ public class Player {
     String name;
     ArrayList<Card> played;
 
+    public void sum() {}
+
+    public void add(){}
+
+
+
 
 }
