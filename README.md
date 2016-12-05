@@ -33,7 +33,7 @@ Two cards drawn:
 
 ![Round two](bj_2.png)
 
-** Layout is not important just put everything in one JPanel with the default layout (no need to change that) **
+**Layout is not important just put everything in one JPanel with the default layout (no need to change that)**
 
 When the user hits the `reset` button, a new Deck should be generated and players should be reset as well.
 
