@@ -33,7 +33,7 @@ Two cards drawn:
 
 ![Round two](bj_2.png)
 
-** Layout is not important just put everything in one `JPanel` with the default layout (no need to change that) **
+** Layout is not important just put everything in one JPanel with the default layout (no need to change that) **
 
 When the user hits the `reset` button, a new Deck should be generated and players should be reset as well.
 
@@ -43,12 +43,9 @@ When the user hits the `reset` button, a new Deck should be generated and player
     - don't use visibility on fields
     - don't use accent in strings or in comments
     - otherwise tests will fail probably
-- In your main method
-    - create a JFrame
-    - add BlackJack panel to it
-    - make it visible
 - The `BlackJack`
-    - should be a `JPanel`
+    - should be a `JPanel`
+    - should have two buttons, a `user` and a `house` `Player`s and a `deck`
     - should handle the button actions in one method
 - The `Deck`
     - should contain two lists: `cards` and `used`, all cards should be in the cards list and after used it should go in to the used list.
@@ -56,7 +53,7 @@ When the user hits the `reset` button, a new Deck should be generated and player
     - if all cards are used `null` should be returned when drawing from the deck
 - The `Card`
     - should have a color and a value
-    - should have a getter for the value 
+    - should have a getter for the value
     - should be displayed as `"color value"` eg. `"karo 7"`
 - The `Player`
     - should have a name
@@ -64,6 +61,10 @@ When the user hits the `reset` button, a new Deck should be generated and player
     - should be able to `sum` the value of its played cards
     - should be able to `add` a new card to its played cards
     - should be added to the panel and displayed as shown: `"Name played: color value..."` eg. `"User played: kor 7 karo 4 "`
+- In your main method
+    - create a JFrame
+    - add BlackJack panel to it
+    - make it visible
 
 ### Acceptance criteria
 The application is accepted if:
