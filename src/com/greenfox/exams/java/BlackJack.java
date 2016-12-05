@@ -11,8 +11,8 @@ import java.awt.event.ActionListener;
 public class BlackJack extends JFrame implements ActionListener {
 
     JPanel blackJack = new JPanel();
-    JLabel user = new JLabel("User played");
-    JLabel house = new JLabel("House played");
+    JLabel user = new JLabel("User played:");
+    JLabel house = new JLabel("House played:");
     JButton reset = new JButton("New Game");
     JButton drawCard = new JButton("Draw a drawCard");
 
