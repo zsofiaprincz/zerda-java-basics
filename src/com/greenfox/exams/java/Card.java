@@ -14,6 +14,10 @@ public class Card {
     String color;
     int value;
 
+
+
+    public Card(){}
+
     public Card(String color, int value) {
         this.color = color;
         this.value = value;
