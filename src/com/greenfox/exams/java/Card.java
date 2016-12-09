@@ -16,10 +16,13 @@ public class Card {
 
 
 
-    public Card(){}
+//    public Card(){} nem kell
 
     public Card(String color, int value) {
         this.color = color;
+        if (value >10){
+            this.value=10;
+        }
         this.value = value;
     }
 

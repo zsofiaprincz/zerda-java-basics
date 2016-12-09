@@ -10,9 +10,23 @@ public class Player {
     String name;
     ArrayList<Card> played;
 
-    public void sum() {}
+    public Player(String name) {
+        this.name = name;
+        played = new ArrayList<>();
+    }
 
-    public void add(){}
+    public int sum() {
+       int sum = 0;
+        for (Card card : played){
+            sum += card.getValue();
+        }
+        return sum;
+    }
+
+    public void add(Card drawn){
+        played.add(drawn);
+
+    }
 
 
 
