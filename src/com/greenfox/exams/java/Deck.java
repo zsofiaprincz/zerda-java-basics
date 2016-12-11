@@ -44,6 +44,10 @@ public class Deck {
         return removed;
     }
 
+
+    public ArrayList<Card> getCards() {
+        return cards;
+    }
 }
 
 

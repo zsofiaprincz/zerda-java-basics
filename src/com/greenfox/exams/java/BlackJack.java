@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 /**
  * Created by zsofiaprincz on 05/12/16.
@@ -17,6 +18,11 @@ public class BlackJack extends JFrame implements ActionListener {
     JButton drawCard = new JButton("Draw a drawCard");
 
     public BlackJack(){
+
+        Player userPlayer = new Player("user");
+        Player housePlayer = new Player("house");
+
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
@@ -29,9 +35,15 @@ public class BlackJack extends JFrame implements ActionListener {
         blackJack.add(reset);
         blackJack.add(drawCard);
 
+        reset.addActionListener(this);
+        drawCard.addActionListener(this);
+
+
 
 
     }
+
+
 
     public static void main(String[] args) {
 
@@ -52,6 +64,11 @@ public class BlackJack extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource() ==reset){
+            ArrayList<Card> pakli = new ArrayList<Card>();
+        } else if(e.getSource()==drawCard){
+
+        }
 
     }
 }

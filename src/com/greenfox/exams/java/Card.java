@@ -26,21 +26,12 @@ public class Card {
         this.value = value;
     }
 
-    public String getColor() {
-        return color;
-    }
 
     public int getValue() {
         return value;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
 
-    public void setValue(int value) {
-        this.value = value;
-    }
 
     @Override
     public String toString() {

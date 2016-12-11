@@ -15,6 +15,8 @@ public class Player {
         played = new ArrayList<>();
     }
 
+
+
     public int sum() {
        int sum = 0;
         for (Card card : played){
