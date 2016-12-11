@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public class BlackJack extends JFrame implements ActionListener {
 
     JPanel blackJack = new JPanel();
-    JLabel user = new JLabel("User played:");
-    JLabel house = new JLabel("House played:");
+    JLabel user = new JLabel("User played:" + toString());
+    JLabel house = new JLabel("House played:" + toString());
     JButton reset = new JButton("New Game");
     JButton drawCard = new JButton("Draw a drawCard");
 
@@ -34,9 +34,12 @@ public class BlackJack extends JFrame implements ActionListener {
         blackJack.add(house);
         blackJack.add(reset);
         blackJack.add(drawCard);
+        Deck deck = new Deck(); //asszem igy lesz egy deck object h meg tudjuk hivni az actio listenerbe a deck osztaly methodjait
 
         reset.addActionListener(this);
         drawCard.addActionListener(this);
+
+
 
 
 
@@ -65,7 +68,8 @@ public class BlackJack extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() ==reset){
-            ArrayList<Card> pakli = new ArrayList<Card>();
+            Deck deck = new Deck();
+
         } else if(e.getSource()==drawCard){
 
         }
