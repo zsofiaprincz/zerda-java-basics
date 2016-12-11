@@ -75,8 +75,8 @@ public class BlackJack extends JFrame implements ActionListener {
 
         } else if(e.getSource() == drawCard){
 
-            userPlayer.add(deck.draw());
-            housePlayer.add(deck.draw());
+            userPlayer.add(deck.draw()); //miert vagy piros ?
+            housePlayer.add(deck.draw()); //te is miert vagy piros?
         }
 
     }
