@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Created by zsofiaprincz on 05/12/16.
@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public class BlackJack extends JFrame implements ActionListener {
 
     JPanel blackJack = new JPanel();
-    JLabel user = new JLabel("User played:" + toString());
-    JLabel house = new JLabel("House played:" + toString());
+    JLabel user = new JLabel("User has:" + toString());
+    JLabel house = new JLabel("House has:" + toString());
     JButton reset = new JButton("New Game");
     JButton drawCard = new JButton("Draw a drawCard");
 
@@ -34,7 +34,7 @@ public class BlackJack extends JFrame implements ActionListener {
         blackJack.add(house);
         blackJack.add(reset);
         blackJack.add(drawCard);
-        Deck deck = new Deck(); //asszem igy lesz egy deck object h meg tudjuk hivni az actio listenerbe a deck osztaly methodjait
+    Deck deck = new Deck(); //asszem igy lesz egy deck object h meg tudjuk hivni az actio listenerbe a deck osztaly methodjait
 
         reset.addActionListener(this);
         drawCard.addActionListener(this);
@@ -67,11 +67,16 @@ public class BlackJack extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        Deck deck = new Deck();
         if(e.getSource() ==reset){
-            Deck deck = new Deck();
+            Deck deck2 = new Deck();
+            user= new JLabel("User");
+            house = new JLabel("House");
 
-        } else if(e.getSource()==drawCard){
+        } else if(e.getSource() == drawCard){
 
+            userPlayer.add(deck.draw());
+            housePlayer.add(deck.draw());
         }
 
     }
